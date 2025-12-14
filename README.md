@@ -1,24 +1,46 @@
-
-
 # Medical-RAG-Chatbot
 ### Build a Complete Medical Chatbot with LLMs (TinyLlama), LangChain, Pinecone, Flask & AWS
 
 ![Medical Chatbot Screenshot](static/images/chatbot_preview.png.png)
 
-This project implements a Retrieval-Augmented Generation (RAG) chatbot capable of answering medical questions based on a custom knowledge base (PDFs). It utilizes the **TinyLlama-1.1B** model for generation and **Hugging Face embeddings**, making it completely open-source and cost-effective.
+## 📝 Project Overview
 
-## Techstack Used:
+This project is an advanced **Medical Chatbot** designed to provide accurate, context-aware answers to medical queries. Unlike standard chatbots that can "hallucinate" or make up facts, this bot uses a technique called **Retrieval-Augmented Generation (RAG)**.
 
-- **Python**
-- **LangChain** (Framework for LLM applications)
-- **Flask** (Web Framework)
-- **HuggingFace** (LLM: TinyLlama-1.1B, Embeddings: all-MiniLM-L6-v2)
-- **Pinecone** (Vector Database)
-- **AWS** (Deployment)
+It retrieves real information from a trusted medical knowledge base (PDF documents) before generating an answer. This ensures the responses are grounded in factual data rather than just the model's training memory.
+
+### 🌟 Key Features
+* **Source-Grounded Answers:** Uses a custom knowledge base (e.g., medical textbooks/PDFs) to answer questions.
+* **Open-Source & Efficient:** Powered by **TinyLlama-1.1B**, a compact but powerful LLM that runs efficiently without high costs.
+* **Fast Retrieval:** Utilizes **Pinecone**, a vector database, to instantly find the most relevant medical context for every user question.
+* **Interactive UI:** Built with **Flask** to provide a clean, user-friendly chat interface.
+* **Deployment Ready:** Configured for seamless deployment on **AWS (EC2 & ECR)** using Docker and GitHub Actions.
 
 ---
 
-## How to run?
+## ⚙️ How It Works
+
+1.  **Ingestion:** Medical PDF documents are loaded and split into small chunks.
+2.  **Embedding:** These chunks are converted into numerical vectors (embeddings) using **Hugging Face** models.
+3.  **Storage:** The vectors are stored in **Pinecone**, a specialized vector database.
+4.  **Retrieval:** When a user asks a question, the system searches Pinecone for the most similar text chunks.
+5.  **Generation:** The retrieved text is sent along with the user's question to the **TinyLlama** model, which generates a natural language answer based *only* on that context.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python:** Core programming language.
+- **LangChain:** Framework for orchestrating the RAG pipeline.
+- **Flask:** Web framework for the chatbot UI.
+- **HuggingFace:** Source for the LLM (TinyLlama-1.1B) and Embeddings (`all-MiniLM-L6-v2`).
+- **Pinecone:** Vector database for semantic search.
+- **AWS:** Cloud platform for deployment (EC2, ECR).
+- **Docker:** Containerization for consistent deployment.
+
+---
+
+## 🚀 How to run?
 
 ### STEPS:
 
@@ -26,7 +48,7 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot capable o
 
 ```bash
 git clone [https://github.com/Pratham1603/Medical-RAG-Chatbot.git](https://github.com/Pratham1603/Medical-RAG-Chatbot.git)
-
+```
 
 ### 2\. Create a conda environment
 
