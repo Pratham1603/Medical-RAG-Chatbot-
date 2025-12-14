@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Deep Dark Background */
+    background: #1f1f2e; 
+    background: -webkit-linear-gradient(to right, #1a1a2e, #16213e); 
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    color: white;
+}
+
+/* Chat Container centering */
+.chat {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Main Card Design */
+.card {
+    height: 85vh; /* Responsive height */
+    border-radius: 20px !important;
+    background-color: #26273b !important; /* Dark Blue-Grey Card */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Header Design (Purple Gradient) */
+.card-header {
+    border-radius: 20px 20px 0 0 !important;
+    border-bottom: 0 !important;
+    /* Professional Purple Gradient */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    padding: 1.5rem !important;
+}
+
+.card-footer {
+    border-radius: 0 0 20px 20px !important;
+    background-color: #26273b !important; /* Matches Card Body */
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 1rem !important;
+}
+
+/* Scrollable Message Area */
+.msg_card_body {
+    overflow-y: auto;
+    background-color: #1e1e2f; /* Slightly darker inner area */
+    padding: 1.5rem !important;
+}
+
+/* Dark Scrollbar styling */
+.msg_card_body::-webkit-scrollbar {
+    width: 6px;
+}
+.msg_card_body::-webkit-scrollbar-thumb {
+    background-color: #4a4a6a;
+    border-radius: 10px;
+}
+.msg_card_body::-webkit-scrollbar-track {
+    background-color: #1e1e2f;
+}
+
+/* Input Area Styling */
+.type_msg {
+    background-color: #2f2f45 !important;
+    border: 1px solid #4a4a6a !important;
+    color: #ffffff !important;
+    height: 50px !important;
+    border-radius: 30px 0 0 30px !important;
+    padding-left: 20px !important;
+}
+
+.type_msg::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.type_msg:focus {
+    box-shadow: none !important;
+    border-color: #764ba2 !important;
+    outline: 0px !important;
+}
+
+.input-group-text {
+    background-color: #2f2f45 !important;
+    border: 1px solid #4a4a6a !important;
+    border-left: 0 !important;
+}
+
+/* Send Button */
+.send_btn {
+    border-radius: 0 30px 30px 0 !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+    width: 50px;
+    transition: opacity 0.3s;
+}
+.send_btn:hover {
+    opacity: 0.9;
+}
+
+/* User Image/Icon Styling */
+.user_img {
+    height: 60px;
+    width: 60px;
+    border: 2px solid #ffffff;
+    background-color: white;
+}
+
+.user_img_msg {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: white;
+}
+
+.img_cont {
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+
+.img_cont_msg {
+    height: 40px;
+    width: 40px;
+}
+
+/* Status Dot */
+.online_icon {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #00d2d3; /* Cyan for visibility on purple */
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.2em;
+    border: 2px solid #764ba2;
+}
+
+/* Header Text */
+.user_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+.user_info span {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.user_info p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+/* --- Chat Bubbles --- */
+
+/* Bot Message (Left) */
+.msg_cotainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    border-radius: 20px 20px 20px 5px;
+    background-color: #2f2f45; /* Dark Grey Bubble */
+    color: #e0e0e0; /* Light Text */
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 100px;
+}
+
+/* User Message (Right) */
+.msg_cotainer_send {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 20px 20px 5px 20px;
+    /* Purple Gradient for User */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(118, 75, 162, 0.3);
+}
+
+/* Timestamps */
+.msg_time {
+    position: absolute;
+    left: 10px;
+    bottom: -18px;
+    color: rgba(255,255,255,0.4);
+    font-size: 10px;
+}
+
+.msg_time_send {
+    position: absolute;
+    right: 10px;
+    bottom: -18px;
+    color: rgba(255,255,255,0.4);
+    font-size: 10px;
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 576px) {
+    .card {
+        height: 100vh;
+        border-radius: 0 !important;
+    }
+    .card-header {
+        border-radius: 0 !important;
+    }
+    .card-footer {
+        border-radius: 0 !important;
+    }
+}
