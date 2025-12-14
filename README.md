@@ -1,5 +1,5 @@
 
-````markdown
+
 # Medical-RAG-Chatbot
 ### Build a Complete Medical Chatbot with LLMs (TinyLlama), LangChain, Pinecone, Flask & AWS
 
@@ -22,11 +22,11 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot capable o
 
 ### STEPS:
 
-### 1. Clone the repository
+### 1\. Clone the repository
 
 ```bash
 git clone [https://github.com/Pratham1603/Medical-RAG-Chatbot.git](https://github.com/Pratham1603/Medical-RAG-Chatbot.git)
-````
+
 
 ### 2\. Create a conda environment
 
