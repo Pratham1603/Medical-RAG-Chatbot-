@@ -1,11 +1,9 @@
-# Medical-RAG-Chatbot-
-Build a Complete Medical Chatbot with LLMs, LangChain, Pinecone, Flask &amp; AWS 
 
 ````markdown
 # Medical-RAG-Chatbot
 ### Build a Complete Medical Chatbot with LLMs (TinyLlama), LangChain, Pinecone, Flask & AWS
 
-![Medical Chatbot Screenshot](static/images/chatbot_preview.png)
+![Medical Chatbot Screenshot](static/images/chatbot_preview.png.png)
 
 This project implements a Retrieval-Augmented Generation (RAG) chatbot capable of answering medical questions based on a custom knowledge base (PDFs). It utilizes the **TinyLlama-1.1B** model for generation and **Hugging Face embeddings**, making it completely open-source and cost-effective.
 
@@ -137,5 +135,13 @@ Go to your GitHub Repo -\> **Settings** \> **Secrets and variables** \> **Action
 
 <!-- end list -->
 
-```
-```
+````
+
+### **Step 3: Upload the Changes**
+Run these commands in your terminal to push the new README and the image file to GitHub:
+
+```bash
+git add .
+git commit -m "Updated README with screenshot and fixed commands"
+git push origin main
+````
