@@ -158,12 +158,3 @@ Go to your GitHub Repo -\> **Settings** \> **Secrets and variables** \> **Action
 <!-- end list -->
 
 ````
-
-### **Step 3: Upload the Changes**
-Run these commands in your terminal to push the new README and the image file to GitHub:
-
-```bash
-git add .
-git commit -m "Updated README with screenshot and fixed commands"
-git push origin main
-````
